@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/gardener-website",
+            "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -25,9 +25,26 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/css/style.css",
+              "src/assets/lib/owlcarousel/assets/owl.carousel.min.css",
+              "src/assets/lib/lightbox/css/lightbox.min.css",
+             
+
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "src/assets/js/main.js",
+              "src/assets/lib/wow/wow.min.js",
+              "src/assets/lib/easing/easing.min.js",
+              "src/assets/lib/waypoints/waypoints.min.js",
+              "src/assets/lib/owlcarousel/owl.carousel.min.js",
+              "src/assets/lib/counterup/counterup.min.js",
+              "src/assets/lib/parallax/parallax.min.js",
+              "src/assets/lib/isotope/isotope.pkgd.min.js",
+              "src/assets/lib/lightbox/js/lightbox.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -91,8 +108,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "b9f9932f-eae8-41b7-93fe-d4994d857236"
+    
   }
+  
 }
